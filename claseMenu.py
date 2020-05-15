@@ -4,13 +4,11 @@ from manejadorLibros import manejadorLibros
 
 class Menu:
     __switcher=None
-    #__libros = None
     def __init__(self):
         self.__switcher = { 1:self.opcion1,
                             2:self.opcion2,
                             3:self.salir
                          }
-        #self.__libros = libros
     def getSwitcher(self):
         return self.__switcher
     def opcion(self, op, libros):
