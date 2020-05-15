@@ -1,42 +1,34 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May  6 18:38:14 2020
+import os
 
-@author: morte
-"""
-#Opciones del menu
+from manejadorLibros import manejadorLibros
 
 class Menu:
     __switcher=None
+    #__libros = None
     def __init__(self):
-        self.__switcher = { 0:self.salir,
-                            1:self.unionConjuntos,
-                            2:self.diferenciaConjuntos,
-                            3:self.igualdadConjuntos,
+        self.__switcher = { 1:self.opcion1,
+                            2:self.opcion2,
+                            3:self.salir
                          }
+        #self.__libros = libros
     def getSwitcher(self):
         return self.__switcher
-    def opcion(self, op):
+    def opcion(self, op, libros):
         func=self.__switcher.get(op, lambda: print("Opción no válida"))
-        func()
+        func(libros)
     def salir(self):
         print('Salir')
-    def unionConjuntos(self):
-        print('Unión')
-    def diferenciaConjuntos(self):
-        print('Diferencia')
-    def igualdadConjuntos(self):
-        print('Igualdad')
+    def opcion1(self, libros):
+        band = False
+        while not band:
+            id = int(input('Ingrese el id del libro: '))
+            os.system('cls')
+            if libros.buscarId(id) == True:
+                band = True
+            else:
+                print('Error: el id ingresado no pertenece a ningun libro.')
 
-if __name__ == '__main__':
-    menu=Menu()
-    salir = False
-    while not salir:
-        print("""
-              0 Salir
-              1 Union de dos conjuntos
-              2 Diferencia de dos conjuntos
-              3 Igualdad entre dos conjuntos""")
-        op = int(input('Ingrese una opcion: '))
-        menu.opcion(op)
-        salir = op == 0
+
+    def opcion2(self, libros):
+        palabra = input('Ingrese una palabra: ')
+        libros.buscaPalabra(palabra)
