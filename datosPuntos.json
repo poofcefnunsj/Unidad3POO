@@ -1,0 +1,49 @@
+{
+    "__class__": "Manejador",
+    "puntos": [
+        {
+            "__class__": "Punto2D",
+            "__atributos__": {
+                "x": 3,
+                "y": 4
+            }
+        },
+        {
+            "__class__": "Punto2D",
+            "__atributos__": {
+                "x": -5,
+                "y": 1
+            }
+        },
+        {
+            "__class__": "Punto3D",
+            "__atributos__": {
+                "x": 4,
+                "y": 5,
+                "z": 1
+            }
+        },
+        {
+            "__class__": "Punto2D",
+            "__atributos__": {
+                "x": -1,
+                "y": -5
+            }
+        },
+        {
+            "__class__": "Punto3D",
+            "__atributos__": {
+                "x": 3,
+                "y": 7,
+                "z": -1
+            }
+        },
+        {
+            "__class__": "Punto2D",
+            "__atributos__": {
+                "x": 5,
+                "y": 7
+            }
+        }
+    ]
+}
